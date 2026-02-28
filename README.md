@@ -64,6 +64,7 @@ Once installed, just ask natural language questions. The skill activates automat
 "Set up a MegaFuel gasless transaction sponsor policy"
 "Trace this transaction to debug the revert"
 "Monitor new blocks on Ethereum via WebSocket"
+"Get the Klaytn account info for 0x... using klay_getAccount"
 "How many compute units does eth_call cost?"
 ```
 
@@ -120,8 +121,8 @@ nodereal-skills/
 │           ├── supported-chains.md         # Chain support matrix
 │           ├── beacon-chain-reference.md   # ETH Beacon Chain (consensus layer)
 │           ├── portal-api-reference.md     # Account & CU usage management
-│           ├── marketplace-reference.md    # Contracts API, NFTScan, Greenfield, etc.
-│           ├── non-evm-chains-reference.md # Aptos, NEAR, BTC, TRON, Sui, Cosmos
+│           ├── marketplace-reference.md    # NFTScan, Contracts, Klaytn, zkSync, etc.
+│           ├── non-evm-chains-reference.md # Aptos, NEAR, Avalanche C-Chain
 │           └── jwt-authentication-reference.md # JWT token auth
 ├── LICENSE.md
 └── README.md
@@ -139,8 +140,8 @@ nodereal-skills/
 | **Debug/Trace** | Transaction tracing and debugging APIs |
 | **ETH Beacon Chain** | Consensus layer validator and staking data |
 | **Portal API** | CU consumption monitoring and usage analytics |
-| **API Marketplace** | NFTScan, SPACE ID, Contracts API, PancakeSwap, Greenfield |
-| **Non-EVM Chains** | Aptos, NEAR, Bitcoin, TRON, Sui, Cosmos |
+| **API Marketplace** | NFTScan, Contracts, Klaytn, zkSync, SPACE ID, Greenfield, BNB Staking, and more |
+| **Non-EVM Chains** | Aptos, NEAR, Avalanche C-Chain |
 | **JWT Authentication** | Secure token-based auth for production |
 
 ## Contributing

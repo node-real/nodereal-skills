@@ -1,4 +1,4 @@
-# Direct Route Reference — MEV Protection
+# Direct Route Reference -- MEV Protection
 
 ## Overview
 
@@ -36,6 +36,12 @@ Submit a single private transaction that bypasses the public mempool.
   "params": ["0xSignedTransactionHex"]
 }
 ```
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `params[0]` | `string` | Yes | Signed, RLP-encoded transaction hex string |
 
 **Response:**
 ```json
@@ -207,6 +213,24 @@ async function checkBundleStatus(bundleHash) {
 }
 ```
 
+### Get Current Bundle Price
+
+```javascript
+async function getBundlePrice() {
+  const response = await fetch(BUILDER_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      jsonrpc: "2.0",
+      id: 1,
+      method: "eth_bundlePrice",
+      params: [],
+    }),
+  });
+  return response.json();
+}
+```
+
 ---
 
 ## Processing Timeline
@@ -226,7 +250,8 @@ After successful bundle/transaction submission:
 ## Best Practices
 
 - Always set `maxTimestamp` at least 60 seconds ahead of current time
-- Monitor bundle status after submission — don't assume inclusion
+- Monitor bundle status after submission -- do not assume inclusion
 - Use `revertingTxHashes` for transactions that may legitimately fail
-- Only one sender per bundle — design transaction flow accordingly
+- Only one sender per bundle -- design transaction flow accordingly
 - Implement retry logic with updated timestamps on bundle expiry
+- Check `eth_bundlePrice` before submission to set competitive gas prices
