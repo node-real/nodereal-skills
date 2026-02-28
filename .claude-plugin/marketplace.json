@@ -1,18 +1,18 @@
 {
-  "name": "meganode-skills",
+  "name": "nodereal-skills",
   "owner": {
     "name": "NodeReal",
     "url": "https://nodereal.io"
   },
   "metadata": {
-    "description": "MegaNode skills for Claude Code — blockchain RPC infrastructure, enhanced APIs, gasless transactions, and MEV protection",
+    "description": "Blockchain skills for Claude Code — blockchain RPC infrastructure, smart contracts, and decentralized applications powered by NodeReal MegaNode",
     "version": "1.0.0",
-    "repository": "https://github.com/user/meganode-skills"
+    "repository": "https://github.com/node-real/nodereal-skills"
   },
   "plugins": [
     {
-      "name": "meganode-skills",
-      "description": "MegaNode skills for blockchain developers: NodeReal RPC infrastructure, Enhanced APIs (ERC-20/NFT), MegaFuel gasless transactions, Direct Route MEV protection, WebSocket subscriptions, and multi-chain dApp development",
+      "name": "nodereal-skills",
+      "description": "MegaNode skills for blockchain developers and founders: NodeReal RPC infrastructure (25+ chains), Enhanced APIs (ERC-20/NFT data), MegaFuel gasless transactions, Direct Route MEV protection, Debug/Trace APIs, smart contract verification, WebSocket subscriptions, API Marketplace (NFTScan, Contracts, Greenfield), non-EVM chains (Aptos, NEAR, Bitcoin, TRON, Sui, Cosmos), and multi-chain dApp development",
       "source": "./",
       "strict": false,
       "skills": [

@@ -220,3 +220,24 @@ w3 = Web3(Web3.HTTPProvider(
 block_number = w3.eth.block_number
 balance = w3.eth.get_balance("0x...")
 ```
+
+---
+
+## Troubleshooting
+
+| Issue | Cause | Solution |
+|-------|-------|----------|
+| `-32005` rate limit error | Exceeded CUPS (calls per second) limit | Implement exponential backoff; upgrade plan for higher CUPS |
+| `-32005` "ran out of cu" | Monthly CU quota exhausted | Upgrade plan or wait for monthly reset |
+| `method not found` error | Method not supported on this chain | Check [supported-chains.md](supported-chains.md) for chain-specific availability |
+| Empty response for `eth_getLogs` | Block range too large or no matching logs | Reduce block range; verify contract address and topics |
+| `execution reverted` on `eth_call` | Contract reverted the call | Check function selector, parameters, and contract state |
+| Timeout on archive queries | Archive data retrieval is slower | Use `latest` block tag when historical data is not needed |
+| WebSocket disconnects | Idle connections are closed after timeout | Implement reconnection logic with exponential backoff |
+
+## Documentation
+
+- **API Reference:** https://docs.nodereal.io/reference
+- **Supported Chains:** https://docs.nodereal.io/docs/supported-chains
+- **Pricing & CU Costs:** https://nodereal.io/pricing
+- **LLM-Optimized Docs:** https://docs.nodereal.io/llms.txt

@@ -316,3 +316,22 @@ Policy management endpoint: `https://open-platform-ap.nodereal.io/{apikey}/megaf
 - Get nonce from MegaFuel endpoint, not standard RPC, to avoid nonce conflicts
 - Always include `User-Agent` header with wallet/dApp identifier
 - Implement timeout-based failure detection (120s BSC, 42s opBNB)
+
+---
+
+## Troubleshooting
+
+| Issue | Cause | Solution |
+|-------|-------|----------|
+| `pm_sponsorable` returns `false` | No matching sponsor policy for this transaction | Check policy configuration; verify contract/method whitelist |
+| Transaction stuck pending | Not mined within timeout (120s BSC, 42s opBNB) | Consider transaction failed; retry or fall back to standard tx |
+| Nonce conflict errors | Using nonce from standard RPC | Always get nonce from MegaFuel endpoint |
+| Missing `User-Agent` header | Required for MegaFuel requests | Include `User-Agent: your-dapp/version` in all requests |
+| Policy creation fails | Insufficient balance or invalid parameters | Check sponsor account balance; verify policy JSON format |
+| Gasless tx reverts | Contract logic issue, not gas related | Debug the contract call separately with `eth_call` |
+
+## Documentation
+
+- **MegaFuel Guide:** https://docs.nodereal.io/docs/megafuel
+- **BEP-322 Specification:** https://github.com/bnb-chain/BEPs/blob/master/BEPs/BEP-322.md
+- **API Reference:** https://docs.nodereal.io/reference

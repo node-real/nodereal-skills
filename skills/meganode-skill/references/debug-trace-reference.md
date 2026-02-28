@@ -328,9 +328,20 @@ Replays all transactions in a block with tracing.
 | Ethereum | Yes | Yes | Yes |
 | Optimism | Partial | — | Partial |
 
-## Notes
+## Troubleshooting
 
-- Debug/Trace APIs require **Growth tier or above**
-- These methods are expensive — avoid in production hot paths
-- `trace_filter` is the most expensive at 10,000 CU per call
-- Use `callTracer` for most debugging needs (lower overhead than vmTrace)
+| Issue | Cause | Solution |
+|-------|-------|----------|
+| `method not found` for debug methods | Free tier does not include Debug/Trace | Upgrade to Growth tier or above |
+| Timeout on `trace_filter` | Block range too large | Reduce `fromBlock`/`toBlock` range; use `count` to limit results |
+| `debug_traceBlockByNumber` timeout | Block has too many transactions | Use `debug_traceTransaction` on individual tx hashes instead |
+| JS tracer syntax error | Invalid JavaScript in custom tracer | Test tracer logic locally; ensure `result`, `fault`, `step` functions exist |
+| Empty `stateDiff` in replay | No state changes in transaction | Transaction may be a pure read or failed early |
+| High CU consumption | Debug/Trace methods are expensive | Use `callTracer` (280 CU) instead of `vmTrace`; avoid `trace_filter` (10,000 CU) |
+
+## Documentation
+
+- **Debug API Reference:** https://docs.nodereal.io/reference/debug_tracetransaction
+- **Trace API Reference:** https://docs.nodereal.io/reference/trace_block
+- **API Reference:** https://docs.nodereal.io/reference
+- **Pricing:** https://nodereal.io/pricing

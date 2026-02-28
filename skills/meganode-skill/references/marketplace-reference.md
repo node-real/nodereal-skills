@@ -375,8 +375,20 @@ https://open-platform-ap.nodereal.io/{API-key}/{service-name}/{method}
 
 ---
 
-## Notes
+## Troubleshooting
 
-- Marketplace API availability and pricing may change — check the [NodeReal Marketplace](https://nodereal.io/marketplace) for current listings
-- Third-party API SLAs are governed by the respective providers
-- CU consumption for marketplace APIs varies by provider and method
+| Issue | Cause | Solution |
+|-------|-------|----------|
+| `getsourcecode` returns empty | Contract is not verified | Only verified contracts return source code; verify first |
+| Marketplace API returns 403 | API not activated in dashboard | Activate the API in MegaNode dashboard under Marketplace |
+| NFTScan returns empty results | Wrong chain or address format | Verify chain parameter and address checksum |
+| Contracts API wrong chain | Using incorrect chain-network identifier | Use `bsc-mainnet`, `bsc-testnet`, `opbnb-mainnet`, or `opbnb-testnet` |
+| Greenfield API errors | API requires specific activation | Activate Greenfield APIs separately in the dashboard |
+| `verifysourcecode` fails | Compiler version mismatch or wrong params | Match exact compiler version and optimization settings from deployment |
+
+## Documentation
+
+- **NodeReal Marketplace:** https://nodereal.io/marketplace
+- **Contracts API:** https://docs.nodereal.io/reference/get-contract-source-code-for-verified-contract-source-codes
+- **NFTScan API:** https://docs.nodereal.io/reference/nftscan-api
+- **API Reference:** https://docs.nodereal.io/reference

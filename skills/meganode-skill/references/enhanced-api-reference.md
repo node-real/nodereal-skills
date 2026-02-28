@@ -677,3 +677,22 @@ All paginated methods use hex-encoded page numbers and page sizes:
 - Page numbers start at `0x1`
 - Page sizes are typically capped at `0x32` (50) or `0x64` (100)
 - Use `totalCount` in the response to determine total pages
+
+---
+
+## Troubleshooting
+
+| Issue | Cause | Solution |
+|-------|-------|----------|
+| Empty `tokenList` response | No tokens held or wrong address format | Verify address is checksummed; try without checksum |
+| `totalCount` is 0 for NFT queries | Wrong token type parameter | Use `0x1` for ERC-721, `0x2` for ERC-1155 |
+| Stale `nr_getTokenHolderCount` data | This method has hours of latency | Use for approximate counts; not for real-time data |
+| Hex-encoded pagination confusion | Page numbers and sizes must be hex | Convert decimal to hex: page 1 = `0x1`, size 20 = `0x14` |
+| `method not found` for `nr_` methods | Enhanced APIs not available on this chain | Check Supported Chains table above; primarily BSC and Ethereum |
+| Large `nr_getAssetTransfers` response | Too many transactions in range | Use `fromBlock`/`toBlock` to narrow range; reduce `maxCount` |
+
+## Documentation
+
+- **Enhanced API Reference:** https://docs.nodereal.io/reference/nr_gettokenbalance20
+- **API Reference (all methods):** https://docs.nodereal.io/reference
+- **LLM-Optimized Docs:** https://docs.nodereal.io/llms.txt
