@@ -106,24 +106,31 @@ curl "https://open-platform.nodereal.io/${NODEREAL_API_KEY}/bsc-mainnet/contract
 ```
 nodereal-skills/
 ├── .claude-plugin/
-│   └── marketplace.json                    # Plugin manifest
+│   └── marketplace.json                        # Plugin manifest
 ├── skills/
 │   └── meganode-skill/
-│       ├── SKILL.md                        # Main skill definition (11 products)
+│       ├── SKILL.md                            # Main skill definition (11 products)
 │       └── references/
-│           ├── rpc-reference.md            # JSON-RPC API reference
-│           ├── enhanced-api-reference.md   # Enhanced API (nr_/ng_ methods)
-│           ├── megafuel-reference.md       # Gasless transaction API
-│           ├── direct-route-reference.md   # MEV protection
-│           ├── websocket-reference.md      # WebSocket subscriptions
-│           ├── debug-trace-reference.md    # Debug, Debug Pro, Trace APIs
-│           ├── pricing-reference.md        # Plans, CUs, rate limits
-│           ├── supported-chains.md         # Chain support matrix
-│           ├── beacon-chain-reference.md   # ETH Beacon Chain (consensus layer)
-│           ├── portal-api-reference.md     # Account & CU usage management
-│           ├── marketplace-reference.md    # NFTScan, Contracts, Klaytn, zkSync, etc.
-│           ├── non-evm-chains-reference.md # Aptos, NEAR, Avalanche C-Chain
-│           └── jwt-authentication-reference.md # JWT token auth
+│           ├── rpc-reference.md                # JSON-RPC API reference
+│           ├── enhanced-api-reference.md       # Enhanced API (nr_ methods)
+│           ├── megafuel-reference.md           # Gasless transaction API
+│           ├── direct-route-reference.md       # MEV protection
+│           ├── websocket-reference.md          # WebSocket subscriptions
+│           ├── debug-trace-reference.md        # Debug, Debug Pro, Trace APIs
+│           ├── beacon-chain-reference.md       # ETH Beacon Chain (consensus layer)
+│           ├── portal-api-reference.md         # Account & CU usage management
+│           ├── non-evm-chains-reference.md     # Aptos, NEAR, Avalanche C-Chain
+│           ├── pricing-reference.md            # Plans, CUs, rate limits
+│           ├── supported-chains.md             # Chain support matrix
+│           ├── jwt-authentication-reference.md # JWT token auth
+│           ├── common-patterns-reference.md    # Multi-chain setup, monitoring patterns
+│           ├── nftscan-reference.md            # NFTScan NFT data API
+│           ├── contracts-api-reference.md      # Smart contract source/ABI/verification
+│           ├── spaceid-reference.md            # SPACE ID .bnb domain resolution
+│           ├── greenfield-reference.md         # BNB Greenfield storage & billing
+│           ├── klaytn-reference.md             # Klaytn (KAIA) RPC methods
+│           ├── zksync-reference.md             # zkSync Era RPC methods
+│           └── marketplace-extras-reference.md # Covalent, BASE, COMBO, BNB Staking, etc.
 ├── LICENSE.md
 └── README.md
 ```
@@ -150,7 +157,7 @@ Contributions are welcome! Please open an issue or submit a pull request.
 
 ### Skill Guidelines
 
-- Keep SKILL.md as the hub with overview-level content and inline code examples
+- Keep SKILL.md as the hub with overview-level content (< 500 lines, description < 1024 chars)
 - Use reference files in `references/` for detailed API documentation
 - Include working code examples in TypeScript/JavaScript
 - Add Troubleshooting tables (Issue | Cause | Solution) to reference files

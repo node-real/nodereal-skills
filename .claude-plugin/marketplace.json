@@ -12,7 +12,7 @@
   "plugins": [
     {
       "name": "nodereal-skills",
-      "description": "MegaNode skills for blockchain developers and founders: NodeReal RPC infrastructure (25+ chains), Enhanced APIs (ERC-20/NFT data), MegaFuel gasless transactions, Direct Route MEV protection, Debug/Trace APIs, smart contract verification, WebSocket subscriptions, API Marketplace (NFTScan, Contracts, Greenfield), non-EVM chains (Aptos, NEAR, Bitcoin, TRON, Sui, Cosmos), and multi-chain dApp development",
+      "description": "MegaNode skills for blockchain developers and founders: NodeReal RPC infrastructure (25+ chains), Enhanced APIs (ERC-20/NFT data), MegaFuel gasless transactions, Direct Route MEV protection, Debug/Trace APIs, smart contract verification, WebSocket subscriptions, API Marketplace (NFTScan, Contracts, Greenfield), non-EVM chains (Aptos, NEAR, Avalanche), and multi-chain dApp development",
       "source": "./",
       "strict": false,
       "skills": [

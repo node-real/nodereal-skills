@@ -22,6 +22,19 @@ https://bsc-mainnet-builder.nodereal.io
 
 ---
 
+## Table of Contents
+
+1. [Endpoint](#endpoint) -- Builder service URL
+2. [Key Features](#key-features) -- MEV protection capabilities
+3. [API Methods](#api-methods) -- Available JSON-RPC methods
+4. [Coinbase Deposit (Priority Boost)](#coinbase-deposit-priority-boost) -- Higher priority via BNB deposit
+5. [Code Examples](#code-examples) -- JavaScript integration samples
+6. [Processing Timeline](#processing-timeline) -- Submission to inclusion timing
+7. [Use Cases](#use-cases) -- Common MEV protection scenarios
+8. [Best Practices](#best-practices) -- Recommended usage guidelines
+
+---
+
 ## API Methods
 
 ### `eth_sendPrivateTransaction`

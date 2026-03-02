@@ -6,6 +6,16 @@ MegaNode supports JSON Web Token (JWT) authentication as an alternative to API k
 
 ---
 
+## Table of Contents
+
+1. [When to Use JWT vs API Key](#when-to-use-jwt-vs-api-key) -- Authentication method comparison
+2. [JWT Token Generation](#jwt-token-generation) -- Create tokens in JS/Python
+3. [Using JWT with RPC Requests](#using-jwt-with-rpc-requests) -- HTTPS and WebSocket usage
+4. [Token Lifecycle](#token-lifecycle) -- Generate, use, refresh, rotate
+5. [Best Practices](#best-practices) -- Security recommendations
+
+---
+
 ## When to Use JWT vs API Key
 
 | Feature | API Key | JWT |

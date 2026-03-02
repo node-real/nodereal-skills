@@ -6,6 +6,17 @@ MegaNode supports 25+ blockchain networks with varying levels of feature support
 
 ---
 
+## Table of Contents
+
+1. [Chain Support Matrix](#chain-support-matrix) -- full chain list with feature flags
+2. [Endpoint URL Patterns](#endpoint-url-patterns) -- URL templates and chain identifiers
+3. [Feature Availability by Chain](#feature-availability-by-chain) -- feature tiers by chain
+4. [MegaFuel Support](#megafuel-support-gasless-transactions) -- gasless transaction availability
+5. [Direct Route Support](#direct-route-support-mev-protection) -- MEV protection availability
+6. [Notes](#notes) -- important caveats and limitations
+
+---
+
 ## Chain Support Matrix
 
 | Chain | Mainnet | Testnet | Archive Node | Enhanced APIs | Chain ID |
@@ -28,14 +39,10 @@ MegaNode supports 25+ blockchain networks with varying levels of feature support
 | PlatON | Yes | — | — | — | 210425 |
 | zkSync | Yes | — | — | — | 324 |
 | BASE | Yes | — | — | — | 8453 |
-| Bitcoin | Yes | — | — | — | — |
-| TRON | Yes | — | — | — | — |
 | Algorand | Yes | — | — | — | — |
 | COMBO | Yes | — | — | — | — |
 | BNB Greenfield | Yes | — | — | — | — |
 | ETH Beacon Chain | Yes | — | — | — | — |
-| Sui | Yes | — | — | — | — |
-| Cosmos | Yes | — | — | — | — |
 
 ---
 
@@ -85,10 +92,6 @@ WSS:   wss://{chain-identifier}-{network}.nodereal.io/ws/v1/{API-key}
 
 - **Aptos** — REST API (not JSON-RPC)
 - **NEAR** — JSON-RPC with NEAR-specific methods
-- **Bitcoin** — Bitcoin JSON-RPC
-- **TRON** — TRON HTTP API
-- **Sui** — Sui JSON-RPC
-- **Cosmos** — Tendermint RPC
 
 ---
 

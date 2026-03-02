@@ -16,6 +16,28 @@ The standard RPC methods are available across **BNB Smart Chain (BSC)**, **opBNB
 - **Uncle Blocks** -- `eth_getUncleByBlockHashAndIndex`, `eth_getUncleByBlockNumberAndIndex`, `eth_getUncleCountByBlockHash`, `eth_getUncleCountByBlockNumber`
 - **WebSockets** -- `eth_subscribe` (newHeads, logs, newPendingTransactions, syncing), `eth_unsubscribe`
 
+## Table of Contents
+
+1. [Overview](#overview) -- API summary and scope
+2. [Endpoint Format](#endpoint-format) -- URL patterns per chain
+3. [Request Format](#request-format) -- JSON-RPC request structure
+4. [Block Tags](#block-tags) -- Supported block parameter values
+5. [Account Methods](#account-methods) -- Balance, nonce, and code queries
+6. [Block Methods](#block-methods) -- Block data retrieval methods
+7. [Transaction Methods](#transaction-methods) -- Transaction lookup and receipts
+8. [EVM Execution Methods](#evm-execution-methods) -- Call and send transactions
+9. [Gas & Fee Methods](#gas--fee-methods) -- Gas price and fee estimation
+10. [Chain & Network Methods](#chain--network-methods) -- Chain ID and network status
+11. [Filter Methods](#filter-methods) -- Event log filtering and polling
+12. [Uncle Block Methods](#uncle-block-methods) -- Uncle block data queries
+13. [WebSocket Methods](#websocket-methods) -- Real-time event subscriptions
+14. [Batch Requests](#batch-requests) -- Multiple calls in one request
+15. [Quick Reference Table](#quick-reference-table) -- Method summary at a glance
+16. [Error Codes](#error-codes) -- Standard JSON-RPC error codes
+17. [Code Examples](#code-examples) -- Language-specific usage samples
+18. [Troubleshooting](#troubleshooting) -- Common issues and solutions
+19. [Documentation](#documentation) -- Links to official docs
+
 ## Endpoint Format
 
 ```

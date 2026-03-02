@@ -4,7 +4,16 @@
 
 MegaNode supports several non-EVM blockchain networks, each with their own API protocols. This reference covers Aptos, NEAR, and Avalanche C-Chain APIs available through MegaNode.
 
-> **Klaytn** (54+ klay_* methods) is documented in [marketplace-reference.md](marketplace-reference.md) under the Web3 API Marketplace section.
+> **Klaytn** (54+ klay_* methods) is documented in [klaytn-reference.md](klaytn-reference.md).
+
+---
+
+## Table of Contents
+
+1. [Aptos Node API](#aptos-node-api) -- REST API for Aptos blockchain
+2. [NEAR RPC](#near-rpc) -- JSON-RPC access for NEAR
+3. [Avalanche C-Chain (AVAX API)](#avalanche-c-chain-avax-api) -- EVM and AVAX-specific methods
+4. [Notes](#notes) -- Usage notes and caveats
 
 ---
 
@@ -1071,7 +1080,7 @@ The Avalanche C-Chain also supports standard EVM JSON-RPC methods (`eth_*`) via 
 
 ## Notes
 
-- Non-EVM chains do NOT support Enhanced APIs (`nr_`/`ng_` methods)
+- Non-EVM chains do NOT support Enhanced APIs (`nr_` methods)
 - Archive node access varies by chain -- check [supported-chains.md](supported-chains.md)
 - Each chain has its own SDK ecosystem -- NodeReal endpoints are compatible with standard chain SDKs
 - CU costs for non-EVM methods may differ from EVM methods -- check the MegaNode dashboard

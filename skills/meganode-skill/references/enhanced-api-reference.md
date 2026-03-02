@@ -23,6 +23,21 @@ The Enhanced API is organized into these categories:
 
 ---
 
+## Table of Contents
+
+1. [Fungible Tokens API (ERC-20 / BEP-20)](#fungible-tokens-api-erc-20--bep-20) -- Token balances, supply, and holders
+2. [NFT APIs (ERC-721 / ERC-1155)](#nft-apis-erc-721--erc-1155) -- NFT holdings, metadata, and inventory
+3. [Transaction Receipts API](#transaction-receipts-api) -- Asset transfers and transaction details
+4. [Platform API](#platform-api) -- Account lists and daily stats
+5. [BNBBurn API](#bnbburn-api) -- Block rewards and daily counts
+6. [Historical Token Holder API](#historical-token-holder-api) -- Async historical holder snapshots
+7. [Supported Chains for Enhanced APIs](#supported-chains-for-enhanced-apis) -- Chain compatibility reference table
+8. [Pagination Patterns](#pagination-patterns) -- Offset and cursor pagination styles
+9. [Troubleshooting](#troubleshooting) -- Common issues and solutions
+10. [Documentation](#documentation) -- Links to official API docs
+
+---
+
 ## Fungible Tokens API (ERC-20 / BEP-20)
 
 ### `nr_getTokenBalance20`

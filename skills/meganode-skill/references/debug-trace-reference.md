@@ -10,6 +10,19 @@ MegaNode provides Debug and Trace APIs for advanced transaction analysis and sma
 
 ---
 
+## Table of Contents
+
+1. [Debug Methods](#debug-methods) -- Standard built-in Geth tracers
+2. [Debug Pro Methods (JavaScript Tracers)](#debug-pro-methods-javascript-tracers) -- Custom JavaScript tracer support
+3. [Trace Methods](#trace-methods) -- Parity-compatible execution analysis
+4. [Complete Method Summary](#complete-method-summary) -- All methods and chain support
+5. [Chain-Specific Endpoint Examples](#chain-specific-endpoint-examples) -- Endpoint URLs per chain
+6. [Tracer Options](#tracer-options) -- Built-in and custom tracers
+7. [Troubleshooting](#troubleshooting) -- Common issues and solutions
+8. [Documentation](#documentation) -- Official reference links
+
+---
+
 ## Debug Methods
 
 Standard debug methods for transaction and block tracing. These use built-in Geth tracers such as `callTracer`, `prestateTracer`, and `4byteTracer`.

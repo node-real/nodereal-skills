@@ -6,6 +6,18 @@ MegaNode uses a Compute Unit (CU) based pricing model. Each API method consumes 
 
 ---
 
+## Table of Contents
+
+1. [Pricing Plans](#pricing-plans) -- Plan tiers and feature comparison
+2. [Add-on CU Packs](#add-on-cu-packs) -- Purchase additional compute units
+3. [CUPS (Compute Units Per Second)](#cups-compute-units-per-second) -- Rate limits per plan
+4. [Compute Unit Costs by Method](#compute-unit-costs-by-method) -- Per-method CU pricing table
+5. [Billing Details](#billing-details) -- Quota resets and payment info
+6. [Error Responses](#error-responses) -- Rate limit error formats
+7. [Cost Optimization Tips](#cost-optimization-tips) -- Reduce CU consumption strategies
+
+---
+
 ## Pricing Plans
 
 | Feature | Free | Growth | Team | Business |
@@ -72,7 +84,7 @@ CUPS resets every second. Exceeding the limit returns an error.
 | CU Cost | Methods |
 |---------|---------|
 | **25** | `nr_getTokenBalance20`, `nr_getTotalSupply20`, `nr_getTokenMeta`, `nr_getTokenHoldings`, `nr_getTokenCount`, `nr_getNFTHoldings`, `nr_getNFTHoldingCount`, `nr_getNFTInventory`, `nr_getAssetTransfersCount`, `nr_getContractCreationTransaction`, `nr_getBlockNumberByTimeStamp` |
-| **50** | `nr_getTokenHolderCount`, `nr_getNFTHolderCount`, `nr_getNFTCollectionHolderCount`, `nr_getAssetTransfers`, `ng_getTransactionByAddress`, `nr_getDailyBlockCountAndReward`, `nr_getDailyBlockReward` |
+| **50** | `nr_getTokenHolderCount`, `nr_getNFTHolderCount`, `nr_getNFTCollectionHolderCount`, `nr_getAssetTransfers`, `nr_getTransactionByAddress`, `nr_getDailyBlockCountAndReward`, `nr_getDailyBlockReward` |
 | **100** | `nr_getTokenHolders`, `nr_getNFTHolders`, `nr_getNFTHoldersWithBalance`, `nr_getAccountList`, `nr_getAccountListCount` |
 
 ### Debug & Trace Methods (280-18,000 CUs)

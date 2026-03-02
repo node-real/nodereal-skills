@@ -10,6 +10,40 @@ The MegaFuel API is organized into three categories:
 - **Public Policy API** -- Policy management via authenticated Sponsor endpoint (requires MegaNode API key)
 - **Private Policy API** -- Same methods as Public Policy API, but scoped to private policies via `X-MegaFuel-Policy-Uuid` header (requires MegaNode API key)
 
+## Table of Contents
+
+1. [Endpoints](#endpoints) -- Network URLs and authentication
+2. [SDKs](#sdks) -- Client libraries and tools
+3. [pm_isSponsorable](#pm_issponsorable) -- Check transaction sponsorship eligibility
+4. [eth_sendRawTransaction (via MegaFuel)](#eth_sendrawtransaction-via-megafuel) -- Submit sponsored raw transactions
+5. [eth_getTransactionCount (via MegaFuel)](#eth_gettransactioncount-via-megafuel) -- Get nonce via MegaFuel
+6. [pm_getSponsorTxByTxHash](#pm_getsponsortxbytxhash) -- Look up sponsor tx by hash
+7. [pm_getSponsorTxByBundleUuid](#pm_getsponsortxbybundleuuid) -- Look up sponsor tx by bundle
+8. [pm_getBundleByUuid](#pm_getbundlebyuuid) -- Get bundle details by UUID
+9. [pm_health](#pm_health) -- Check MegaFuel service health
+10. [pm_addToWhitelist](#pm_addtowhitelist) -- Add addresses to whitelist
+11. [pm_rmFromWhitelist](#pm_rmfromwhitelist) -- Remove addresses from whitelist
+12. [pm_emptyWhitelist](#pm_emptywhitelist) -- Clear all whitelist entries
+13. [pm_getWhitelist](#pm_getwhitelist) -- Retrieve current whitelist entries
+14. [pm_getPolicyByUuid](#pm_getpolicybyuuid) -- Get policy details by UUID
+15. [pm_listPoliciesByOwner](#pm_listpoliciesbyowner) -- List policies for an owner
+16. [pm_updatePolicy](#pm_updatepolicy) -- Modify an existing policy
+17. [pm_getPolicySpendData](#pm_getpolicyspenddata) -- Get policy spending summary
+18. [pm_getPolicyDailySpendRecord](#pm_getpolicydailyspendrecord) -- Get daily policy spend records
+19. [pm_getUserSpendData](#pm_getuserspenddata) -- Get user spending summary
+20. [pm_getUserDailySpendRecord](#pm_getuserdailyspendrecord) -- Get daily user spend records
+21. [pm_getSponsorTxByTxHash (Sponsor endpoint)](#pm_getsponsortxbytxhash-sponsor-endpoint) -- Sponsor-scoped tx hash lookup
+22. [pm_getSponsorTxByBundleUuid (Sponsor endpoint)](#pm_getsponsortxbybundleuuid-sponsor-endpoint) -- Sponsor-scoped bundle UUID lookup
+23. [pm_getBundleByUuid (Sponsor endpoint)](#pm_getbundlebyuuid-sponsor-endpoint) -- Sponsor-scoped bundle details lookup
+24. [pm_listDepositsByPolicyUuid](#pm_listdepositsbypolicyuuid) -- List deposits for a policy
+25. [pm_listPolicyAudits](#pm_listpolicyaudits) -- View policy audit trail
+26. [pm_isSponsorable (Private Policy)](#pm_issponsorable-private-policy) -- Private policy sponsorship check
+27. [eth_sendRawTransaction (Private Policy)](#eth_sendrawtransaction-private-policy) -- Submit private policy transactions
+28. [eth_getTransactionCount (Private Policy)](#eth_gettransactioncount-private-policy) -- Get nonce via private policy
+29. [Timeout Thresholds](#timeout-thresholds) -- Network timeout configurations
+30. [Best Practices](#best-practices) -- Recommended usage patterns
+31. [Documentation](#documentation) -- Links to external resources
+
 ## Endpoints
 
 ### Public Endpoints (Sponsor API)

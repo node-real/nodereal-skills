@@ -6,6 +6,16 @@ The Portal API provides programmatic access to MegaNode account management, CU (
 
 ---
 
+## Table of Contents
+
+1. [Base URL](#base-url) -- Portal API endpoint URLs
+2. [API Methods](#api-methods) -- CU consumption and detail endpoints
+3. [Code Examples](#code-examples) -- JavaScript integration samples
+4. [Use Cases](#use-cases) -- Monitoring and alerting scenarios
+5. [Best Practices](#best-practices) -- Recommended usage guidelines
+
+---
+
 ## Base URL
 
 ```

@@ -8,6 +8,20 @@ WebSocket connections use the `eth_subscribe` and `eth_unsubscribe` JSON-RPC met
 
 ---
 
+## Table of Contents
+
+1. [WSS Endpoint Format](#wss-endpoint-format) -- Connection URL pattern
+2. [Supported Chains and Endpoints](#supported-chains-and-endpoints) -- Available networks and URLs
+3. [eth_subscribe](#eth_subscribe) -- Create real-time subscriptions
+4. [Subscription Types](#subscription-types) -- Available event subscription kinds
+5. [eth_unsubscribe](#eth_unsubscribe) -- Cancel active subscriptions
+6. [Billing](#billing) -- WebSocket bandwidth CU costs
+7. [wscat Examples](#wscat-examples) -- CLI subscription examples
+8. [Code Examples](#code-examples) -- JavaScript integration samples
+9. [Best Practices](#best-practices) -- Recommended usage guidelines
+
+---
+
 ## WSS Endpoint Format
 
 ```
